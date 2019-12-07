@@ -1,0 +1,35 @@
+<div class="w-full md:w-2/3">
+  <div class="mt-6 lg:mt-10 border-b border-gray-400">
+    <% posts.forEach(function(post, index) { %>
+      <div class="border-t border-gray-400 py-6 sm:py-8 lg:py-10">
+        <div class="md:flex items-center justify-between">
+          <div>
+            <h3 class="text-gray-900 sm:text-lg lg:text-xl">
+              <a href="<%= post.link %>" class="hover:underline"><%= post.title %></a>
+            </h3>
+            <div class="flex flex-wrap text-gray-700 text-sm sm:text-base lg:text-lg mt-2 sm:mt-3 lg:mt-3">
+                <% post.tags.forEach(function(tag, tagIndex) { %>
+                  <%if (tagIndex === 0) { %>
+                    <a href="<%= tag.link %>" class="hover:underline hover:text-gray-900"><%= tag.name %></a>
+                  <% } %>
+                <% }); %>
+              
+              <div class="mx-2 text-gray-500">•</div>
+              <div><%= post.dateFormat %></div>
+              <div class="mx-2 text-gray-500">•</div>
+              <div><%= post.stats.text %></div>
+            </div>
+          </div>
+          <% if (themeConfig.showFeatureImage && post.feature) { %>
+            <div class="md:pl-2 mt-4 md:mt-0">
+              <a href="<%= post.link %>">
+                <img class="h-32 md:w-40 w-full object-cover rounded-sm" src="<%= post.feature %>" alt="<%= post.title %>">
+              </a>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+  <%- include('./pagination') %>
+</div>

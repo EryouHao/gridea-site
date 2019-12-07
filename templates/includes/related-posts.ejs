@@ -1,0 +1,16 @@
+<% let count = 0 %>
+<% site.posts.forEach((post) => { %>
+  <% if (currentPost.link !== post.link) { %>
+    <% currentPost.tags.forEach((tag) => { %>
+      <% if (count < 3 && post.tags.find((tag2) => tag2.name === tag.name)) { %>
+        <% count += 1 %>
+        <div class="border-t border-gray-400 py-6">
+          <a href="<%= post.link %>" class="text-lg hover:underline my-2 inline-block"><%= post.title %></a>
+        </div>
+      <% } %>
+    <% }) %>
+  <% } %>
+<% }) %>
+<% if (count === 0) { %>
+  <div class="py-6 text-gray-700 text-sm">暂无相关文章</div>
+<% } %>
