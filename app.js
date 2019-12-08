@@ -21,6 +21,15 @@ app.get('/', async (req, res) => {
 })
 
 /**
+ * Docs Page
+ */
+app.get('/docs', async (req, res) => {
+  console.log(__dirname)
+  const response = require('./data/list.json')
+  res.render('docs', { ...response })
+})
+
+/**
  * Post Page
  */
 app.get('/post/:postName', async (req, res) => {
