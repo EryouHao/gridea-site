@@ -1,11 +1,7 @@
 const generateOverride = (params = {}) => {
   let result = ''
-
-  if (params.customCss) {
-    result += `
-      ${params.customCss}
-    `
-  }
+  
+  // write your code
 
   return result
 }

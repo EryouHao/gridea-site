@@ -30,6 +30,15 @@ app.get('/docs', async (req, res) => {
 })
 
 /**
+ * Themes Page
+ */
+app.get('/themes', async (req, res) => {
+  console.log(__dirname)
+  const response = require('./data/list.json')
+  res.render('themes', { ...response })
+})
+
+/**
  * Post Page
  */
 app.get('/post/:postName', async (req, res) => {
