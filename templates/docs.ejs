@@ -1,18 +1,27 @@
 <html lang="en">
 <head>
-  <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+  <%- include('./includes/head', { siteTitle: site.themeConfig.siteName }) %>
 </head>
 <body>
   <div class="antialiased" id="app">
     <%- include('./includes/header') %>
 
     <div class="max-w-6xl mx-auto px-4 py-8 my-8 flex flex-wrap">
-      <div class="w-full py-8" v-for="i in 8" :key="i">
-        <a href="#" class="transition-fast p-4 m-8 border-gray-100 border-2 rounded hover:border-gray-400 block">
-          <h2 class="text-xl font-medium">快速上手</h2>
-          <div class="text-gray-500">跟着教程一起，开始愉快的 Gridea 之旅吧～</div>
-        </a>
-      </div>
+      <% site.customConfig.docs.forEach((item, index) => { %>
+        <%
+          const foundPost = site.posts.find((p) => p.link.split('/').pop() === item.link.split('/').pop())
+        %>
+
+        <% if (foundPost)  { %>
+          <div class="w-full py-8">
+            <a href="<%= foundPost.link %>" class="transition-fast p-4 m-8 border-gray-100 border-2 rounded hover:border-gray-400 block">
+              <h2 class="text-xl font-medium"><%= foundPost.title %></h2>
+              <div class="text-gray-500"><%- foundPost.abstract %></div>
+            </a>
+          </div>
+        <% } %>
+
+      <% }) %>
     </div>
 
   </div>
