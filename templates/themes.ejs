@@ -3,10 +3,10 @@
   <%- include('./includes/head', { siteTitle: site.themeConfig.siteName }) %>
 </head>
 <body>
-  <div class="antialiased" id="app">
+  <div class="antialiased flex flex-col min-h-screen" id="app">
     <%- include('./includes/header') %>
 
-    <div class="max-w-6xl mx-auto px-4 py-8 my-8">
+    <div class="max-w-6xl mx-auto px-4 py-8 my-8 flex-1">
       <div class="text-center lg:px-4 pb-10">
         <div class="p-2 bg-yellow-400 items-center text-yellow-darkest leading-none lg:rounded-full flex lg:inline-flex cursor-pointer" role="alert" @click="oepnUrl('https://github.com/getgridea/site/issues/new')">
           <span class="flex rounded-full bg-yellow-600 uppercase px-2 py-1 text-xs font-bold mr-3">Click Here</span>
@@ -37,6 +37,7 @@
       </div>
     </div>
 
+    <%- include('./includes/footer') %>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="/media/scripts/main.js"></script>

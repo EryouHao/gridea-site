@@ -3,10 +3,10 @@
   <%- include('./includes/head', { siteTitle: site.themeConfig.siteName }) %>
 </head>
 <body>
-  <div class="antialiased" id="app">
+  <div class="antialiased flex flex-col min-h-screen" id="app">
     <%- include('./includes/header') %>
 
-    <div class="max-w-6xl mx-auto px-4 py-8 my-8">
+    <div class="max-w-6xl mx-auto px-4 py-8 my-8 flex-1">
       <div class="text-center p-10 mb-10">
         <h2 class="text-3xl font-medium text-gray-800">跟随我们</h2>
         <p class="text-gray-500 mt-3">一起使用 Gridea。然后，爱上它</p>
@@ -37,7 +37,7 @@
 
       <% }) %>
     </div>
-
+    <%- include('./includes/footer') %>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="/media/scripts/main.js"></script>

@@ -1,9 +1,9 @@
 <html lang="en">
 <%- include('./includes/head', { siteTitle: site.themeConfig.siteName }) %>
 <body>
-  <div class="antialiased" id="app">
+  <div class="antialiased flex flex-col min-h-screen" id="app">
     <%- include('./includes/header') %>
-    <div class="max-w-6xl mx-auto px-4 py-8 my-8">
+    <div class="max-w-6xl mx-auto px-4 py-8 my-8 flex-1">
 
       <h1 class="text-3xl text-center"><%= post.title %></h1>
       
@@ -42,6 +42,8 @@
         <% } %>
       <% } %>
     </div>
+
+    <%- include('./includes/footer') %>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
