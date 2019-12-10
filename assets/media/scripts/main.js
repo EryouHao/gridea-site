@@ -5,4 +5,9 @@ new Vue({
       isOpen: false,
     } 
   },
+  methods: {
+    oepnUrl(url) {
+      window.open(url, '_blank')
+    },
+  },
 })

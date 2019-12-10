@@ -11,13 +11,38 @@ app.set('views', path.join(__dirname, '/templates'));
 app.set('view engine', 'ejs');
 // app.engine('html', ejs.renderFile);
 
+// Mock Data
+const { customConfig } = require('./config.json')
+const configObj = customConfig.reduce((o, c) => {
+  o[c.name] = c.value
+  return o
+}, {})
+
+console.log('自定义配置', configObj)
+const site = {
+  posts: [],
+  menus: [
+    { name: "首页", link: '/' },
+    { name: "文档", link: '/docs' },
+    { name: "主题", link: '/themes' },
+    { name: "博客", link: '/blog' },
+  ],
+  tags: [],
+  themeConfig: {},
+  customConfig: configObj,
+}
+
 /**
  * Home Page & Post List Page
  */
 app.get('/', async (req, res) => {
   console.log(__dirname)
   const response = require('./data/list.json')
-  res.render('index', { ...response })
+  res.render('index', {
+    ...response,
+    themeConfig: {},
+    site,
+  })
 })
 
 /**
@@ -26,7 +51,7 @@ app.get('/', async (req, res) => {
 app.get('/docs', async (req, res) => {
   console.log(__dirname)
   const response = require('./data/list.json')
-  res.render('docs', { ...response })
+  res.render('docs', { ...response, site })
 })
 
 /**
@@ -35,7 +60,7 @@ app.get('/docs', async (req, res) => {
 app.get('/themes', async (req, res) => {
   console.log(__dirname)
   const response = require('./data/list.json')
-  res.render('themes', { ...response })
+  res.render('themes', { ...response, site })
 })
 
 /**
