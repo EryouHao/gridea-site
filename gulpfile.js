@@ -13,7 +13,8 @@ gulp.task('less', () => {
 gulp.task('tailwind', function () {
   const postcss = require('gulp-postcss')
 
-  return gulp.src('css/tailwind.css')
+  return gulp.src('less/tailwind.less')
+    .pipe(less())
     .pipe(postcss([
       require('tailwindcss')('./tailwind.config.js'),
       require('autoprefixer'),
@@ -53,9 +54,20 @@ gulp.task('sync', () => {
   gulp.watch([
     './**/*.less',
   ]).on('change', () => {
-    return gulp.src('./assets/styles/main.less')
+    gulp.src('./assets/styles/main.less')
       .pipe(less())
       .pipe(gulp.dest('./styles'))
+    
+    const postcss = require('gulp-postcss')
+
+    return gulp.src('less/tailwind.less')
+      .pipe(less())
+      .pipe(postcss([
+        require('tailwindcss')('./tailwind.config.js'),
+        require('autoprefixer'),
+      ]))
+      .pipe(rename("tailwind.css"))
+      .pipe(gulp.dest('./assets/media'))
   })
 
   gulp.watch([
