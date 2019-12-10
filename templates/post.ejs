@@ -3,7 +3,7 @@
 <body>
   <div class="antialiased flex flex-col min-h-screen" id="app">
     <%- include('./includes/header') %>
-    <div class="max-w-6xl mx-auto px-4 py-8 my-8 flex-1">
+    <div class="max-w-6xl w-full mx-auto px-4 py-8 my-8 flex-1">
 
       <h1 class="text-3xl text-center"><%= post.title %></h1>
       
@@ -18,7 +18,7 @@
         <img class="max-w-full mt-6 rounded" src="<%= post.feature %>" alt="">
       <% } %>
       
-      <div class="flex relative mx-6 md:mx-12 bg-white mt-0 md:-mt-24 md:rounded md:shadow pb-24">
+      <div class="flex relative mx-6 md:mx-12 bg-white <%- themeConfig.showFeatureImage && post.feature ? 'mt-0 md:-mt-24' : 'mt-8 md:mt-16' %> md:rounded md:shadow pb-24">
         <div v-pre class="markdown mt-10 flex-1 px-0 md:px-12">
           <%- post.content %>
         </div>

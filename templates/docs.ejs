@@ -6,36 +6,30 @@
   <div class="antialiased flex flex-col min-h-screen" id="app">
     <%- include('./includes/header') %>
 
-    <div class="max-w-6xl mx-auto px-4 py-8 my-8 flex-1">
+    <div class="max-w-6xl w-full mx-auto px-4 py-8 my-8 flex-1">
       <div class="text-center p-10 mb-10">
         <h2 class="text-3xl font-medium text-gray-800">跟随我们</h2>
         <p class="text-gray-500 mt-3">一起使用 Gridea。然后，爱上它</p>
       </div>
 
       <div class="flex flex-wrap -m-4">
-        <div class="w-1/3 p-4" v-for="i in 10" :key="i">
-          <a href="" class="transition-fast px-4 py-8 border-gray-100 border-2 rounded hover:border-gray-400 block">
-            <h2 class="text-xl font-medium">快速上手</h2>
-            <div class="text-gray-500">你好，欢迎开始愉快的 Gridea 之旅～</div>
-          </a>
-        </div>
+        <% site.customConfig.docs.forEach((item, index) => { %>
+          <%
+            const foundPost = site.posts.find((p) => p.link.split('/').pop() === item.link.split('/').pop())
+          %>
+
+          <% if (foundPost)  { %>
+            <div class="w-1/3 p-4">
+              <a href="<%= foundPost.link %>" class="transition-fast px-4 py-8 border-gray-100 border-2 rounded hover:border-gray-400 block">
+                <h2 class="text-xl font-medium"><%= foundPost.title %></h2>
+                <div class="text-gray-500"><%- foundPost.abstract %></div>
+              </a>
+            </div>
+          <% } %>
+
+        <% }) %>
       </div>
 
-      <% site.customConfig.docs.forEach((item, index) => { %>
-        <%
-          const foundPost = site.posts.find((p) => p.link.split('/').pop() === item.link.split('/').pop())
-        %>
-
-        <% if (foundPost)  { %>
-          <div class="w-full py-8">
-            <a href="<%= foundPost.link %>" class="transition-fast p-4 m-8 border-gray-100 border-2 rounded hover:border-gray-400 block">
-              <h2 class="text-xl font-medium"><%= foundPost.title %></h2>
-              <div class="text-gray-500"><%- foundPost.abstract %></div>
-            </a>
-          </div>
-        <% } %>
-
-      <% }) %>
     </div>
     <%- include('./includes/footer') %>
   </div>
