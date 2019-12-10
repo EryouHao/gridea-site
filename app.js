@@ -69,20 +69,18 @@ app.get('/themes', async (req, res) => {
 app.get('/post/:postName', async (req, res) => {
   const response = require('./data/post.json')
   console.log(response)
-  res.render('post', {
-    ...response,
-    moment,
-  })
+  res.render('post', { ...response, moment, site })
 })
 
 /**
  * Archives Page
  */
-app.get('/archives', async (req, res) => {
+app.get('/blog', async (req, res) => {
   const response = require('./data/archives.json')
   res.render('archives', {
     ...response,
     moment,
+    site,
   })
 })
 
@@ -99,7 +97,10 @@ app.get('/tags', async (req, res) => {
  */
 app.get('/tag/:tagName', async (req, res) => {
   const response = require('./data/tag.json')
-  res.render('tag', { ...response })
+  res.render('tag', {
+    ...response,
+    site,
+  })
 })
 
 // 使用 3001 端口
