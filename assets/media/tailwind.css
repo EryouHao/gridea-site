@@ -11622,7 +11622,7 @@ h2.markdown {
 .markdown > h3,
 h3.markdown {
   margin-top: 3rem;
-  margin-bottom: -0.75rem;
+  margin-bottom: 0.75rem;
   color: #000;
   line-height: 1.25;
   font-weight: 500;
@@ -11779,10 +11779,6 @@ pre code.markdown,
   font-size: 0.75rem;
   color: #6b46c1;
   vertical-align: baseline;
-}
-
-.markdown > table td:first-child {
-  border-color: #999;
 }
 
 @media (min-width: 640px) {
