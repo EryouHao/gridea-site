@@ -1,8 +1,8 @@
-<header class="border-b border-gray-200 bg-white">
+<header class="<%- hideBorder ? '': 'border-b' %> border-gray-200 bg-white">
   <div class="max-w-6xl mx-auto sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
     <div class="flex items-center justify-between px-4 py-3 sm:p-0">
       <a href="/" class="flex items-center">
-        <img class="h-8 mr-2" src="/media/gridea.png" alt="Gridea"> <span class="font-medium text-xl">Gridea</span>
+        <img class="h-8 mr-2" src="/media/gridea.png" alt="Gridea" style="transform: scale(1.2);"> <span class="font-medium text-xl">Gridea</span>
       </a>
       <div class="sm:hidden">
         <button @click="isOpen = !isOpen" type="button" class="block text-gray-500 hover:text-gray-500 focus:text-gray-500 focus:outline-none">
