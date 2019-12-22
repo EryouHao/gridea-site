@@ -1,13 +1,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Gridea Beta</title>
+<title><%= siteTitle %></title>
+<meta name="description" content="<%- themeConfig.siteDescription %>" />
+<link rel="shortcut icon" href="<%= themeConfig.domain %>/favicon.ico">
 <link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,700" rel="stylesheet">
 <link rel="stylesheet" href="<%= site.themeConfig.domain %>/media/tailwind.css">
 <link rel="stylesheet" href="<%= site.themeConfig.domain %>/styles/main.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<script src="https://unpkg.com/css-doodle@0.6.1/css-doodle.min.js"></script>
+<link rel="alternate" type="application/atom+xml" title="<%= siteTitle %> - Atom Feed" href="<%= themeConfig.domain %>/atom.xml">
 
 <% if (site.customConfig.ga) { %>
   <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>

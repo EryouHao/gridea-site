@@ -1,5 +1,5 @@
 <html lang="en">
-<%- include('./includes/head', { siteTitle: site.themeConfig.siteName }) %>
+  <%- include('./includes/head', { siteTitle: `${post.title} | ${site.themeConfig.siteName}` }) %>
 <body>
   <div class="antialiased flex flex-col min-h-screen md:bg-gray-100" id="app">
     <%- include('./includes/header') %>

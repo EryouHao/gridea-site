@@ -3,6 +3,7 @@ new Vue({
   data() {
     return {
       isOpen: false,
+      version: '0.8.3',
       themeList: [
         {
           name: 'Line',
@@ -37,12 +38,30 @@ new Vue({
           price: '6'
         },
         {
+          name: 'NexT',
+          github: 'https://github.com/hsxyhao/gridea-theme-next',
+          demo: 'https://hsxyhao.github.io/',
+          image: '/theme-images/theme-next.jpg',
+          include: false,
+          isNew: true,
+          showDemo: true,
+        },
+        {
+          name: '凛',
+          github: 'https://github.com/name-cq/gridea-theme-lin',
+          demo: 'https://apa70.com',
+          image: '/theme-images/theme-lin.jpg',
+          include: false,
+          isNew: true,
+          showDemo: true,
+        },
+        {
           name: '宋',
           github: 'https://github.com/alterfang/gridea-theme-song',
           demo: 'https://shanbu.fun/',
           image: '/theme-images/theme-song.jpg',
           include: false,
-          isNew: true,
+          isNew: false,
           showDemo: true,
         },
         {
@@ -51,7 +70,7 @@ new Vue({
           demo: 'https://gridea-theme-shisan.netlify.com/',
           image: '/theme-images/theme-shisan.jpg',
           include: false,
-          isNew: true,
+          isNew: false,
           showDemo: true,
         },
         {
@@ -60,7 +79,7 @@ new Vue({
           demo: 'https://day.fands.top/',
           image: '/theme-images/theme-jia.jpg',
           include: false,
-          isNew: true,
+          isNew: false,
           showDemo: true,
         },
         {
@@ -69,7 +88,7 @@ new Vue({
           demo: 'https://kveln.cn/',
           image: '/theme-images/theme-clean.jpg',
           include: false,
-          isNew: true,
+          isNew: false,
           showDemo: true,
         },
         {
