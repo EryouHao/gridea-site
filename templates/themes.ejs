@@ -15,8 +15,8 @@
         </div>
       </div>
 
-      <div class="flex flex-wrap">
-        <div class="md:w-1/2 sm:w-full md:pb-8 md:pt-0 p-4" :class="{ 'md:pr-4 md:pl-0': !(index % 2), 'md:pl-4 md:pr-0': index % 2 }" v-for="(theme, index) in themeList" :key="index">
+      <div class="flex flex-wrap -m-4">
+        <div class="w-full md:w-1/2 md:pb-8 md:pt-0 p-4" v-for="(theme, index) in themeList" :key="index">
           <div class="shadow rounded bg-white hover:shadow-lg relative transition-fast overflow-hidden">
             <a :href="theme.link || theme.github" target="_blank" class="block w-full bg-cover" :style="{ paddingTop: '56.25%', backgroundImage: `url('${theme.image}')` }">
             </a>
