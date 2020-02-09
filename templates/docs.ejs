@@ -15,7 +15,11 @@
       <div class="flex flex-wrap -m-4">
         <% site.customConfig.docs.forEach((item, index) => { %>
           <%
-            const foundPost = site.posts.find((p) => p.link.split('/').pop() === item.link.split('/').pop())
+            const foundPost = site.posts.find((p) => {
+              const pArr = p.link.split('/')
+              const itemArr = item.link.split('/')
+              return pArr[pArr.length - 2] === itemArr[itemArr.length - 2]
+            })
           %>
 
           <% if (foundPost)  { %>

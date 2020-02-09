@@ -3,8 +3,19 @@ new Vue({
   data() {
     return {
       isOpen: false,
-      version: '0.8.3',
+      version: '0.9.1',
       themeList: [
+        {
+          name: 'Rocky',
+          github: 'https://github.com/EryouHao/gridea-theme-rocky',
+          link: 'https://mianbaoduo.com/o/bread/YpWYlJ0=',
+          demo: 'https://gridea-theme-rocky.netlify.com',
+          image: '/theme-images/theme-rocky.jpg',
+          include: false,
+          showDemo: true,
+          isNew: true,
+          price: '¥ 6'
+        },
         {
           name: 'Line',
           github: 'https://github.com/EryouHao/gridea-theme-line',
@@ -36,6 +47,33 @@ new Vue({
           include: false,
           showDemo: true,
           price: '6'
+        },
+        {
+          name: 'Pure',
+          github: 'https://github.com/imhanjie/gridea-theme-pure',
+          demo: 'https://imhanjie.com/',
+          image: '/theme-images/theme-pure.jpg',
+          include: false,
+          isNew: true,
+          showDemo: true,
+        },
+        {
+          name: 'Breek',
+          github: 'https://github.com/lmm214/gridea-theme-breek/',
+          demo: 'https://i.immmmm.com/',
+          image: '/theme-images/theme-breek.jpg',
+          include: false,
+          isNew: true,
+          showDemo: true,
+        },
+        {
+          name: 'Chic',
+          github: 'https://github.com/ITJoker233/Gridea-theme-Chic',
+          demo: 'https://blog.itjoker.cn/',
+          image: '/theme-images/theme-chic.jpg',
+          include: false,
+          isNew: true,
+          showDemo: true,
         },
         {
           name: 'NexT',
