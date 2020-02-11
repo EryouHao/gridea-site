@@ -1,6 +1,8 @@
 <html lang="en">
 <head>
-  <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+  <%- include('./includes/head') %>
+  <title><%= site.themeConfig.siteName + ' | 一个静态博客写作客户端' %></title>
+  <meta name="description" content="<%- themeConfig.siteDescription %>" />
 </head>
 <body>
   <div class="antialiased flex flex-col min-h-screen" id="app">

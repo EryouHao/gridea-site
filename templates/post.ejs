@@ -1,5 +1,7 @@
 <html lang="en">
   <%- include('./includes/head', { siteTitle: `${post.title} | ${site.themeConfig.siteName}` }) %>
+  <title><%= `${post.title} | ${site.themeConfig.siteName}` %></title>
+  <meta name="description" content="<%= post.description %>" />
 <body>
   <div class="antialiased flex flex-col min-h-screen md:bg-gray-100" id="app">
     <%- include('./includes/header', { hideBorder: false }) %>
