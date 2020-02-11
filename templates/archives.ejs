@@ -1,6 +1,8 @@
 <html lang="en">
 <head>
-  <%- include('./includes/head', { siteTitle: `博客 | ${site.themeConfig.siteName}` }) %>
+  <%- include('./includes/head') %>
+  <title><%= '博客 | ' + site.themeConfig.siteName %></title>
+  <meta name="description" content="从我们的博客，获取 Gridea 的更新动态，使用技巧，以及更多" />
 </head>
 <body>
   <div class="antialiased flex flex-col min-h-screen" id="app">
