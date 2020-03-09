@@ -4,6 +4,13 @@
   "author": "EryouHao",
   "customConfig": [
     {
+      "name": "usersCount",
+      "label": "已部署用户数",
+      "group": "文案",
+      "value": "",
+      "type": "input"
+    },
+    {
       "name": "docs",
       "label": "文档",
       "group": "文档",
