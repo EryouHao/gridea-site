@@ -8,7 +8,7 @@ new Vue({
         {
           name: 'Rocky',
           github: 'https://github.com/EryouHao/gridea-theme-rocky',
-          link: 'https://mianbaoduo.com/o/bread/YpWYlJ0=',
+          link: 'https://mbd.pub/o/bread/YpWYlJ0=',
           demo: 'https://gridea-theme-rocky.netlify.com',
           image: '/media/images/theme-images/theme-rocky.jpg',
           include: false,
@@ -19,7 +19,7 @@ new Vue({
         {
           name: 'Line',
           github: 'https://github.com/EryouHao/gridea-theme-line',
-          link: 'https://mianbaoduo.com/o/bread/mbd-Zp6Ulg==',
+          link: 'https://mbd.pub/o/bread/mbd-Zp6Ulg==',
           demo: 'https://gridea-theme-line.netlify.com',
           image: '/media/images/theme-images/theme-line.jpg',
           include: false,
@@ -30,7 +30,7 @@ new Vue({
         // {
         //   name: 'Tech',
         //   github: 'https://github.com/EryouHao/gridea-theme-tech',
-        //   link: 'https://mianbaoduo.com/o/bread/mbd-ZZ2clA==',
+        //   link: 'https://mbd.pub/o/bread/mbd-ZZ2clA==',
         //   demo: 'https://gridea-theme-tech.netlify.com',
         //   image: '/media/images/theme-images/theme-tech.jpg',
         //   include: false,
@@ -41,7 +41,7 @@ new Vue({
         {
           name: 'Walker',
           github: 'https://github.com/EryouHao/gridea-theme-walker',
-          link: 'https://mianbaoduo.com/product/show/mbd-aJqU',
+          link: 'https://mbd.pub/product/show/mbd-aJqU',
           demo: 'https://gridea-theme-walker.netlify.com',
           image: '/media/images/theme-images/theme-walker.jpg',
           include: false,
